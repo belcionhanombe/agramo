@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRAMO - Associação Agro-Ambiental de Moçambique</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        .top-bar {
+            background: #1b5e20;
+            padding: 10px 0;
+            text-align: right;
+        }
+
+        .lang-switch {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .lang-switch button {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 5px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .lang-switch button:hover {
+            background: white;
+            color: #1b5e20;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: #2e7d32;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .logo p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #2e7d32;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2e7d32;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.95), rgba(27, 94, 32, 0.95)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%232e7d32" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .btn {
+            background: white;
+            color: #2e7d32;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s;
+            animation: fadeInUp 1.4s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Features Section */
+        .features {
+            background: #f5f5f5;
+            padding: 80px 20px;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #2e7d32;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            color: #2e7d32;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #2e7d32, #1b5e20);
+            height: 400px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image::before {
+            content: '🌱';
+            font-size: 15em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.2;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #2e7d32;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Services Section */
+        .services {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .services h2 {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #2e7d32;
+            transition: all 0.3s;
+        }
+
+        .service-item:hover {
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateX(10px);
+        }
+
+        .service-item::before {
+            content: '✓';
+            color: #2e7d32;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #f5f5f5, #e8f5e9);
+            padding: 80px 20px;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .contact-content h2 {
+            color: #2e7d32;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background: #e8f5e9;
+            transform: translateX(10px);
+        }
+
+        .contact-icon {
+            font-size: 2em;
+            margin-right: 20px;
+            min-width: 50px;
+        }
+
+        .contact-item a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #1b5e20;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+
+        .en { display: none; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+        }
+    </style>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.pt').forEach(e => e.style.display = lang === 'pt' ? 'block' : 'none');
+            document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
+        }
+    </script>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="lang-switch">
+        <button onclick="switchLang('pt')">🇲🇿 Português</button>
+        <button onclick="switchLang('en')">🇬🇧 English</button>
+    </div>
+</div>
+
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <h1>AGRAMO</h1>
+            <p>Associação Agro-Ambiental de Moçambique</p>
+        </div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contactos">Contactos</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section PT -->
+<section class="hero pt">
+    <h2>Promovendo o desenvolvimento sustentável das comunidades rurais</h2>
+    <p>Trabalhamos para um futuro melhor através da agricultura sustentável e gestão ambiental</p>
+    <a href="#sobre" class="btn">Saiba Mais</a>
+</section>
+
+<!-- Hero Section EN -->
+<section class="hero en">
+    <h2>Promoting sustainable development of rural communities</h2>
+    <p>We work for a better future through sustainable agriculture and environmental management</p>
+    <a href="#sobre" class="btn">Learn More</a>
+</section>
+
+<!-- Features Section PT -->
+<section class="features pt">
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🌾</div>
+            <h3>Agricultura Sustentável</h3>
+            <p>Promovemos práticas agrícolas que respeitam o meio ambiente e aumentam a produtividade</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3>Gestão Ambiental</h3>
+            <p>Trabalhamos com comunidades para proteger e preservar os recursos naturais</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Educação Comunitária</h3>
+            <p>Capacitamos comunidades com conhecimento e competências essenciais</p>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section EN -->
+<section class="features en">
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🌾</div>
+            <h3>Sustainable Agriculture</h3>
+            <p>We promote agricultural practices that respect the environment and increase productivity</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3>Environmental Management</h3>
+            <p>We work with communities to protect and preserve natural resources</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Community Education</h3>
+            <p>We empower communities with essential knowledge and skills</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="sobre" class="about">
+    <div class="about-content pt">
+        <h2>Sobre a AGRAMO</h2>
+        <p>A AGRAMO é uma associação dedicada à promoção do desenvolvimento sócio-económico das comunidades rurais através da agricultura sustentável, gestão ambiental e educação comunitária.</p>
+        <p>Trabalhamos para criar um futuro melhor e mais sustentável para Moçambique, capacitando comunidades e promovendo práticas agrícolas responsáveis.</p>
+        <a href="#servicos" class="btn">Nossos Serviços</a>
+    </div>
+    <div class="about-content en">
+        <h2>About AGRAMO</h2>
+        <p>AGRAMO is an association dedicated to promoting the socio-economic development of rural communities through sustainable agriculture, environmental management and community education.</p>
+        <p>We work to create a better and more sustainable future for Mozambique, empowering communities and promoting responsible agricultural practices.</p>
+        <a href="#servicos" class="btn">Our Services</a>
+    </div>
+    <div class="about-image"></div>
+</section>
+
+<!-- Stats Section PT -->
+<section class="stats pt">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <h3>10+</h3>
+            <p>Anos de Experiência</p>
+        </div>
+        <div class="stat-item">
+            <h3>50+</h3>
+            <p>Comunidades Servidas</p>
+        </div>
+        <div class="stat-item">
+            <h3>1000+</h3>
+            <p>Pessoas Capacitadas</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>Compromisso</p>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section EN -->
+<section class="stats en">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <h3>10+</h3>
+            <p>Years of Experience</p>
+        </div>
+        <div class="stat-item">
+            <h3>50+</h3>
+            <p>Communities Served</p>
+        </div>
+        <div class="stat-item">
+            <h3>1000+</h3>
+            <p>People Trained</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>Commitment</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="servicos" class="services">
+    <div class="pt">
+        <h2>Serviços e Objectivos</h2>
+        <div class="services-list">
+            <div class="service-item">Desenvolvimento agrícola sustentável</div>
+            <div class="service-item">Gestão ambiental comunitária</div>
+            <div class="service-item">Segurança alimentar</div>
+            <div class="service-item">Investigação agrícola e ambiental</div>
+            <div class="service-item">Equidade de género</div>
+            <div class="service-item">Educação comunitária</div>
+            <div class="service-item">Assistência humanitária</div>
+        </div>
+    </div>
+
+    <div class="en">
+        <h2>Services and Objectives</h2>
+        <div class="services-list">
+            <div class="service-item">Sustainable agricultural development</div>
+            <div class="service-item">Community environmental management</div>
+            <div class="service-item">Food security</div>
+            <div class="service-item">Agricultural and environmental research</div>
+            <div class="service-item">Gender equity</div>
+            <div class="service-item">Community education</div>
+            <div class="service-item">Humanitarian assistance</div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contactos" class="contact">
+    <div class="contact-content">
+        <div class="pt">
+            <h2>Contactos</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:julifaife@gmail.com">julifaife@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <strong>Telefone:</strong><br>
+                        <a href="tel:+258845817222">+258 84 581 7222</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <strong>Contacto Alternativo:</strong><br>
+                        <a href="tel:+258840698389">+258 84 069 8389</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <strong>Localização:</strong><br>
+                        Cidade da Maxixe - Inhambane, Moçambique
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="en">
+            <h2>Contacts</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:julifaife@gmail.com">julifaife@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <strong>Phone:</strong><br>
+                        <a href="tel:+258845817222">+258 84 581 7222</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <strong>Alternative Contact:</strong><br>
+                        <a href="tel:+258840698389">+258 84 069 8389</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <strong>Location:</strong><br>
+                        Maxixe City - Inhambane, Mozambique
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 AGRAMO - Associação Agro-Ambiental de Moçambique</p>
+        <p>Todos os direitos reservados</p>
+        <p style="margin-top: 20px; font-size: 0.9em;">Construindo um futuro sustentável para as comunidades rurais</p>
+    </footer>
+</footer>
+
+</body>
+</html>
