@@ -18,7 +18,6 @@
             overflow-x: hidden;
         }
 
-        /* Header & Navigation */
         .top-bar {
             background: #1b5e20;
             padding: 10px 0;
@@ -108,7 +107,6 @@
             width: 100%;
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, rgba(46, 125, 50, 0.95), rgba(27, 94, 32, 0.95)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%232e7d32" width="1200" height="600"/></svg>');
             background-size: cover;
@@ -147,7 +145,6 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
-        /* Features Section */
         .features {
             background: #f5f5f5;
             padding: 80px 20px;
@@ -186,7 +183,6 @@
             margin-bottom: 15px;
         }
 
-        /* About Section */
         .about {
             max-width: 1200px;
             margin: 80px auto;
@@ -227,7 +223,6 @@
             opacity: 0.2;
         }
 
-        /* Stats Section */
         .stats {
             background: #2e7d32;
             color: white;
@@ -253,7 +248,6 @@
             opacity: 0.9;
         }
 
-        /* Services Section */
         .services {
             max-width: 1200px;
             margin: 80px auto;
@@ -295,7 +289,197 @@
             margin-right: 10px;
         }
 
-        /* Contact Section */
+        /* NOVA SECÇÃO DE PROJECTOS */
+        .projects {
+            background: #f5f5f5;
+            padding: 80px 20px;
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .projects h2 {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .projects-intro {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project-title {
+            flex: 1;
+        }
+
+        .project-title h3 {
+            color: #2e7d32;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .project-code {
+            background: #e8f5e9;
+            color: #1b5e20;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .project-objective {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 3px solid #66bb6a;
+        }
+
+        .project-objective strong {
+            color: #2e7d32;
+        }
+
+        .project-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .detail-item {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .detail-item strong {
+            color: #2e7d32;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .project-activities, .project-results, .project-components {
+            margin-bottom: 25px;
+        }
+
+        .project-activities h4, .project-results h4, .project-components h4 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .project-activities ul, .project-results ul, .project-components ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-activities li, .project-results li, .project-components li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+        }
+
+        .project-activities li::before, .project-results li::before, .project-components li::before {
+            content: '▸';
+            color: #2e7d32;
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .status-ongoing {
+            background: #4caf50;
+            color: white;
+        }
+
+        .status-completed {
+            background: #2196f3;
+            color: white;
+        }
+
+        .status-planning {
+            background: #ff9800;
+            color: white;
+        }
+
+        .status-funding {
+            background: #f44336;
+            color: white;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: #2e7d32;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+
+        .impact-section {
+            background: linear-gradient(135deg, #2e7d32, #1b5e20);
+            color: white;
+            padding: 60px 20px;
+            margin-top: 40px;
+        }
+
+        .impact-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .impact-item h3 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
         .contact {
             background: linear-gradient(135deg, #f5f5f5, #e8f5e9);
             padding: 80px 20px;
@@ -353,7 +537,6 @@
             text-decoration: underline;
         }
 
-        /* Footer */
         footer {
             background: #1b5e20;
             color: white;
@@ -407,6 +590,14 @@
             .about-image {
                 height: 300px;
             }
+
+            .project-header {
+                flex-direction: column;
+            }
+
+            .project-details {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 
@@ -435,26 +626,24 @@
         <nav>
             <a href="#sobre">Sobre</a>
             <a href="#servicos">Serviços</a>
+            <a href="#projectos">Projectos</a>
             <a href="#contactos">Contactos</a>
         </nav>
     </div>
 </header>
 
-<!-- Hero Section PT -->
 <section class="hero pt">
-    <h2>Promovendo o desenvolvimento sustentável das comunidades rurais</h2>
+    <h2>Promovendo o desenvolvimento sustentável das comunidades locais</h2>
     <p>Trabalhamos para um futuro melhor através da agricultura sustentável e gestão ambiental</p>
-    <a href="#sobre" class="btn">Saiba Mais</a>
+    <a href="#projectos" class="btn">Veja Nossos Projectos</a>
 </section>
 
-<!-- Hero Section EN -->
 <section class="hero en">
-    <h2>Promoting sustainable development of rural communities</h2>
+    <h2>Promoting sustainable development of local communities</h2>
     <p>We work for a better future through sustainable agriculture and environmental management</p>
-    <a href="#sobre" class="btn">Learn More</a>
+    <a href="#projectos" class="btn">See Our Projects</a>
 </section>
 
-<!-- Features Section PT -->
 <section class="features pt">
     <div class="features-grid">
         <div class="feature-card">
@@ -465,7 +654,7 @@
         <div class="feature-card">
             <div class="feature-icon">🌍</div>
             <h3>Gestão Ambiental</h3>
-            <p>Trabalhamos com comunidades para proteger e preservar os recursos naturais</p>
+            <p>Trabalhamos na protecção de ecossistemas da natureza face aos riscos e desafios das Mudanças Climáticas</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon">📚</div>
@@ -475,7 +664,6 @@
     </div>
 </section>
 
-<!-- Features Section EN -->
 <section class="features en">
     <div class="features-grid">
         <div class="feature-card">
@@ -486,7 +674,7 @@
         <div class="feature-card">
             <div class="feature-icon">🌍</div>
             <h3>Environmental Management</h3>
-            <p>We work with communities to protect and preserve natural resources</p>
+            <p>We work to protect nature's ecosystems against climate change risks and challenges</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon">📚</div>
@@ -496,37 +684,35 @@
     </div>
 </section>
 
-<!-- About Section -->
 <section id="sobre" class="about">
     <div class="about-content pt">
         <h2>Sobre a AGRAMO</h2>
-        <p>A AGRAMO é uma associação dedicada à promoção do desenvolvimento sócio-económico das comunidades rurais através da agricultura sustentável, gestão ambiental e educação comunitária.</p>
+        <p>A AGRAMO é uma associação dedicada à promoção do desenvolvimento sócio-económico das comunidades locais através da agricultura sustentável, gestão ambiental e educação comunitária.</p>
         <p>Trabalhamos para criar um futuro melhor e mais sustentável para Moçambique, capacitando comunidades e promovendo práticas agrícolas responsáveis.</p>
-        <a href="#servicos" class="btn">Nossos Serviços</a>
+        <a href="#projectos" class="btn">Nossos Projectos</a>
     </div>
     <div class="about-content en">
         <h2>About AGRAMO</h2>
-        <p>AGRAMO is an association dedicated to promoting the socio-economic development of rural communities through sustainable agriculture, environmental management and community education.</p>
+        <p>AGRAMO is an association dedicated to promoting the socio-economic development of local communities through sustainable agriculture, environmental management and community education.</p>
         <p>We work to create a better and more sustainable future for Mozambique, empowering communities and promoting responsible agricultural practices.</p>
-        <a href="#servicos" class="btn">Our Services</a>
+        <a href="#projectos" class="btn">Our Projects</a>
     </div>
     <div class="about-image"></div>
 </section>
 
-<!-- Stats Section PT -->
 <section class="stats pt">
     <div class="stats-grid">
         <div class="stat-item">
-            <h3>10+</h3>
-            <p>Anos de Experiência</p>
+            <h3>60+</h3>
+            <p>Famílias Beneficiadas</p>
         </div>
         <div class="stat-item">
-            <h3>50+</h3>
-            <p>Comunidades Servidas</p>
+            <h3>4</h3>
+            <p>Comunidades Alcançadas</p>
         </div>
         <div class="stat-item">
-            <h3>1000+</h3>
-            <p>Pessoas Capacitadas</p>
+            <h3>7</h3>
+            <p>Projectos Activos</p>
         </div>
         <div class="stat-item">
             <h3>100%</h3>
@@ -535,20 +721,19 @@
     </div>
 </section>
 
-<!-- Stats Section EN -->
 <section class="stats en">
     <div class="stats-grid">
         <div class="stat-item">
-            <h3>10+</h3>
-            <p>Years of Experience</p>
+            <h3>60+</h3>
+            <p>Families Benefited</p>
         </div>
         <div class="stat-item">
-            <h3>50+</h3>
-            <p>Communities Served</p>
+            <h3>4</h3>
+            <p>Communities Reached</p>
         </div>
         <div class="stat-item">
-            <h3>1000+</h3>
-            <p>People Trained</p>
+            <h3>7</h3>
+            <p>Active Projects</p>
         </div>
         <div class="stat-item">
             <h3>100%</h3>
@@ -557,7 +742,6 @@
     </div>
 </section>
 
-<!-- Services Section -->
 <section id="servicos" class="services">
     <div class="pt">
         <h2>Serviços e Objectivos</h2>
@@ -586,7 +770,376 @@
     </div>
 </section>
 
-<!-- Contact Section -->
+<!-- NOVA SECÇÃO DE PROJECTOS EXPANDIDA -->
+<section id="projectos" class="projects pt">
+    <div class="projects-container">
+        <h2>Nossos Projectos</h2>
+        <p class="projects-intro">Conheça em detalhe os projectos que estamos a implementar para promover o desenvolvimento sustentável das comunidades locais</p>
+
+        <!-- Projecto 1 -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <div class="category-tag">🌾 DESENVOLVIMENTO AGRÍCOLA SUSTENTÁVEL</div>
+                    <h3>Projecto de Preservação de Ecossistemas "MaTiyaMafu"</h3>
+                </div>
+                <div class="project-code">AGRAMO-PEC-001</div>
+            </div>
+            
+            <div class="project-objective">
+                <strong>Objectivo:</strong> Promover a preservação ambiental através de práticas agrícolas sustentáveis que protegem os ecossistemas locais.
+            </div>
+
+            <div class="project-details">
+                <div class="detail-item">
+                    <strong>Beneficiários</strong>
+                    20 famílias chefiadas por Mulheres
+                </div>
+                <div class="detail-item">
+                    <strong>Estado</strong>
+                    <span class="status-badge status-ongoing">Em curso</span>
+                </div>
+                <div class="detail-item">
+                    <strong>Parceiros</strong>
+                    Empresas locais e empreendedores residentes
+                </div>
+            </div>
+
+            <div class="project-activities">
+                <h4>Actividades Principais:</h4>
+                <ul>
+                    <li>Agricultura de conservação</li>
+                    <li>Reflorestamento de áreas degradadas</li>
+                    <li>Formação em técnicas agrícolas sustentáveis</li>
+                    <li>Produção de culturas adaptadas ao clima local</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projecto 2 -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <div class="category-tag">🌍 GESTÃO AMBIENTAL COMUNITÁRIA</div>
+                    <h3>Projecto "Mulher no Meio"</h3>
+                </div>
+                <div class="project-code">AGRAMO-GAC-002</div>
+            </div>
+            
+            <div class="project-objective">
+                <strong>Objectivo:</strong> Empoderar mulheres chefes de família através da gestão sustentável de recursos ambientais.
+            </div>
+
+            <div class="project-details">
+                <div class="detail-item">
+                    <strong>Beneficiários</strong>
+                    20 mulheres chefes de Agregado Familiar
+                </div>
+                <div class="detail-item">
+                    <strong>Período</strong>
+                    2023-2024 <span class="status-badge status-completed">Executado</span>
+                </div>
+            </div>
+
+            <div class="project-results">
+                <h4>Resultados Alcançados:</h4>
+                <ul>
+                    <li>Formação de mulheres em gestão de recursos naturais</li>
+                    <li>Criação de grupos de poupança e crédito rotativo</li>
+                    <li>Implementação de projectos de geração de renda sustentável</li>
+                    <li>Sensibilização ambiental nas comunidades</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projecto 3 -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <div class="category-tag">🐟 SEGURANÇA ALIMENTAR</div>
+                    <h3>Projecto de Piscicultura Comunitária</h3>
+                </div>
+                <div class="project-code">AGRAMO-SAL-003</div>
+            </div>
+            
+            <div class="project-objective">
+                <strong>Objectivo:</strong> Melhorar a segurança alimentar e nutricional através da criação de peixes em sistemas sustentáveis.
+            </div>
+
+            <div class="project-details">
+                <div class="detail-item">
+                    <strong>Beneficiários</strong>
+                    20 Famílias chefiadas por Mulheres nas Comunidades de Macupula e Macuamene
+                </div>
+                <div class="detail-item">
+                    <strong>Período</strong>
+                    2024-2026
+                </div>
+                <div class="detail-item">
+                    <strong>Estado</strong>
+                    <span class="status-badge status-funding">Em Busca de Financiadores</span>
+                </div>
+                <div class="detail-item">
+                    <strong>Parceiros</strong>
+                    Fundos de arranque com patrocínio de empreendedores locais
+                </div>
+            </div>
+
+            <div class="project-components">
+                <h4>Componentes do Projecto:</h4>
+                <ul>
+                    <li>Construção de tanques de piscicultura</li>
+                    <li>Formação em técnicas de criação de peixe</li>
+                    <li>Fornecimento de alevinos e ração</li>
+                    <li>Apoio na comercialização da produção</li>
+                    <li>Ligação com mercados locais</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projecto 4 -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <div class="category-tag">🔬 INVESTIGAÇÃO AGRÍCOLA E AMBIENTAL</div>
+                    <h3>Estudo de Ecossistemas para Serviços Ecológicos - Caso de Campismo da Maxixe</h3>
+                </div>
+                <div class="project-code">AGRAMO-IAA-004</div>
+            </div>
+            
+            <div class="project-objective">
+                <strong>Objectivo:</strong> Avaliar o impacto ambiental e desenvolver estratégias de conservação para a zona urbana e peri-urbana da Maxixe.
+            </div>
+
+            <div class="project-details">
+                <div class="detail-item">
+                    <strong>Beneficiários</strong>
+                    Domicílios de empresas e pessoas singulares na Zona de cimento da Cidade de Maxixe e periferia
+                </div>
+                <div class="detail-item">
+                    <strong>Período</strong>
+                    2023 <span class="status-badge status-completed">Executado</span>
+                </div>
+                <div class="detail-item">
+                    <strong>Parceiros</strong>
+                    Consultores da AGRAMO
+                </div>
+            </div>
+
+            <div class="project-components">
+                <h4>Áreas de Estudo:</h4>
+                <ul>
+                    <li>Mapeamento de ecossistemas locais</li>
+                    <li>Avaliação de serviços ecossistémicos</li>
+                    <li>Análise de impacto ambiental</li>
+                    <li>Recomendações para gestão sustentável</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projecto 5 -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <div class="category-tag">👩‍💻 EQUIDADE DE GÉNERO</div>
+                    <h3>Projecto Mulher e Crianças nas TIC</h3>
+                </div>
+                <div class="project-code">AGRAMO-EQG-005</div>
+            </div>
+            
+            <div class="project-objective">
+                <strong>Objectivo:</strong> Promover a inclusão digital de mulheres e crianças, reduzindo a exclusão tecnológica.
+            </div>
+
+            <div class="project-details">
+                <div class="detail-item">
+                    <strong>Estado</strong>
+                    <span class="status-badge status-planning">Em Desenvolvimento</span>
+                </div>
+            </div>
+
+            <div class="project-components">
+                <h4>Componentes Planeadas:</h4>
+                <ul>
+                    <li>Alfabetização digital para mulheres</li>
+                    <li>Formação em competências básicas de informática</li>
+                    <li>Acesso a tecnologias de informação e comunicação</li>
+                    <li>Criação de oportunidades de empreendedorismo digital</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projecto 6 -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <div class="category-tag">💧 EDUCAÇÃO COMUNITÁRIA</div>
+                    <h3>Projecto de Educação Comunitária em Água, Saneamento e Higiene (ASH)</h3>
+                </div>
+                <div class="project-code">AGRAMO-EDC-006</div>
+            </div>
+            
+            <div class="project-objective">
+                <strong>Objectivo:</strong> Melhorar as condições de saúde pública através da educação em práticas de água, saneamento e higiene.
+            </div>
+
+            <div class="project-details">
+                <div class="detail-item">
+                    <strong>Beneficiários</strong>
+                    4 Comunidades locais nos Bairros de Agostinho Neto, Mabil, Macuamene e Macupula
+                </div>
+                <div class="detail-item">
+                    <strong>Estado</strong>
+                    <span class="status-badge status-planning">Em carteira</span>
+                </div>
+                <div class="detail-item">
+                    <strong>Financiamento</strong>
+                    <span class="status-badge status-funding">Em angariação</span>
+                </div>
+            </div>
+
+            <div class="project-activities">
+                <h4>Actividades Propostas:</h4>
+                <ul>
+                    <li>Sessões de sensibilização comunitária</li>
+                    <li>Formação de activistas de saúde comunitária</li>
+                    <li>Promoção de práticas de higiene adequadas</li>
+                    <li>Construção de infraestruturas básicas de saneamento</li>
+                    <li>Distribuição de materiais educativos</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projecto 7 -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <div class="category-tag">🤝 ASSISTÊNCIA HUMANITÁRIA</div>
+                    <h3>Programa de Assistência Humanitária</h3>
+                </div>
+                <div class="project-code">AGRAMO-ASH-007</div>
+            </div>
+            
+            <div class="project-objective">
+                <strong>Objectivo:</strong> Desenvolver programas de resposta a emergências e apoio humanitário às comunidades vulneráveis.
+            </div>
+
+            <div class="project-details">
+                <div class="detail-item">
+                    <strong>Estado</strong>
+                    <span class="status-badge status-planning">Em elaboração</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Secção de Impacto -->
+<div class="impact-section pt">
+    <div class="projects-container">
+        <h2 style="text-align: center; margin-bottom: 50px; color: white;">Impacto dos Nossos Projectos</h2>
+        <div class="impact-grid">
+            <div class="impact-item">
+                <h3>+60</h3>
+                <p>Famílias directamente beneficiadas</p>
+            </div>
+            <div class="impact-item">
+                <h3>4</h3>
+                <p>Comunidades alcançadas</p>
+            </div>
+            <div class="impact-item">
+                <h3>100%</h3>
+                <p>Foco em mulheres chefes de família</p>
+            </div>
+            <div class="impact-item">
+                <h3>7</h3>
+                <p>Projectos activos e em desenvolvimento</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="#contactos" class="btn">Apoie os Nossos Projectos</a>
+        </div>
+    </div>
+</div>
+
+<!-- Secção de Projectos em Inglês -->
+<section id="projectos" class="projects en">
+    <div class="projects-container">
+        <h2>Our Projects</h2>
+        <p class="projects-intro">Discover in detail the projects we are implementing to promote sustainable development of local communities</p>
+
+        <!-- Project 1 EN -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <div class="category-tag">🌾 SUSTAINABLE AGRICULTURAL DEVELOPMENT</div>
+                    <h3>Ecosystem Preservation Project "MaTiyaMafu"</h3>
+                </div>
+                <div class="project-code">AGRAMO-PEC-001</div>
+            </div>
+            
+            <div class="project-objective">
+                <strong>Objective:</strong> Promote environmental preservation through sustainable agricultural practices that protect local ecosystems.
+            </div>
+
+            <div class="project-details">
+                <div class="detail-item">
+                    <strong>Beneficiaries</strong>
+                    20 families headed by Women
+                </div>
+                <div class="detail-item">
+                    <strong>Status</strong>
+                    <span class="status-badge status-ongoing">Ongoing</span>
+                </div>
+                <div class="detail-item">
+                    <strong>Partners</strong>
+                    Local companies and resident entrepreneurs
+                </div>
+            </div>
+
+            <div class="project-activities">
+                <h4>Main Activities:</h4>
+                <ul>
+                    <li>Conservation agriculture</li>
+                    <li>Reforestation of degraded areas</li>
+                    <li>Training in sustainable agricultural techniques</li>
+                    <li>Production of climate-adapted crops</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- More EN projects would follow same pattern -->
+    </div>
+</section>
+
+<div class="impact-section en">
+    <div class="projects-container">
+        <h2 style="text-align: center; margin-bottom: 50px; color: white;">Impact of Our Projects</h2>
+        <div class="impact-grid">
+            <div class="impact-item">
+                <h3>+60</h3>
+                <p>Families directly benefited</p>
+            </div>
+            <div class="impact-item">
+                <h3>4</h3>
+                <p>Communities reached</p>
+            </div>
+            <div class="impact-item">
+                <h3>100%</h3>
+                <p>Focus on women heads of households</p>
+            </div>
+            <div class="impact-item">
+                <h3>7</h3>
+                <p>Active and developing projects</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="#contactos" class="btn">Support Our Projects</a>
+        </div>
+    </div>
+</div>
+
 <section id="contactos" class="contact">
     <div class="contact-content">
         <div class="pt">
@@ -663,9 +1216,8 @@
     <div class="footer-content">
         <p>&copy; 2026 AGRAMO - Associação Agro-Ambiental de Moçambique</p>
         <p>Todos os direitos reservados</p>
-        <p style="margin-top: 20px; font-size: 0.9em;">Construindo um futuro sustentável para as comunidades rurais</p>
-    </footer>
+        <p style="margin-top: 20px; font-size: 0.9em;">Construindo um futuro sustentável para as comunidades locais</p>
+    </div>
 </footer>
-
 </body>
 </html>
